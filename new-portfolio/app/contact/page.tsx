@@ -11,7 +11,7 @@ import Alert from '@mui/material/Alert';
 
 export default function ContactPage() {
  
-  const [result, setResult] = React.useState<{message: string, severity: 'error' | 'info' | 'success' | undefined}>({message:'',severity: undefined});
+  const [result, setResult] = React.useState<{message: string, severity: 'error' | 'info' | 'success' | undefined }>({message:'',severity: undefined});
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,7 +30,6 @@ export default function ContactPage() {
       setResult({message:'Form Submitted Successfully',severity:'success'});
       (event.target as HTMLFormElement).reset();
     } else {
-      console.log("Error", data);
       setResult({message:'An error occured try again',severity:'error'});
     }
   }catch(err){
@@ -40,7 +39,6 @@ export default function ContactPage() {
   };
   return (
     <main className="relative">
-  
       <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Contact</h1>
