@@ -55,18 +55,6 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-
-          <div className="relative flex justify-center items-center">
-            <div className="w-64 h-64 relative">
-              <Image
-                src="https://tailwindui.com/img/avatars/avatar-1.png"
-                alt="Profile"
-                width={256}
-                height={256}
-                className="rounded-full"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>
