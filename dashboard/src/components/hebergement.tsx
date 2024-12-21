@@ -8,7 +8,7 @@ import axios from '@/api/auth'
 import { useQuery } from '@tanstack/react-query'
 import { Alert } from '@mui/material'
 import {v4} from 'uuid'
-import  AddHebergementForm  from '@/components/addForm'
+import  AddHebergementForm  from '@/components/haubergeForm'
 import { useAtom, useSetAtom } from 'jotai'
 import { isVisible, updateHousingAtom } from '@/jotai/atom'
 
