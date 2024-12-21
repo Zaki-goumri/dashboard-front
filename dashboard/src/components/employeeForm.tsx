@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, Form, Input, Button, Select } from 'antd';
 import { useAtom } from 'jotai';
-import { isVisible, updateEmpolyeeAtom} from '@/jotai/atom';
+import { isVisible, updateEmpolyeeAtom} from '@/lib/atom';
 import axios from '@/api/auth';
   
 export interface employees {

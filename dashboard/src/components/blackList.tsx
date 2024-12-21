@@ -10,7 +10,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Alert } from '@mui/material'
 import AddBlackList from './blackListForm'
 import { useAtom } from 'jotai'
-import { isVisible } from '@/jotai/atom'
+import { isVisible } from '@/lib/atom'
 
 interface userInfo{
     _id:string,

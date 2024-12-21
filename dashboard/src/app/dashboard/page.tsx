@@ -6,7 +6,7 @@ import { OccupancyChart } from '@/components/OccupancyChart'
 import { useEffect, useState } from 'react'
 import axios from '@/api/auth'
 import { useSetAtom } from 'jotai'
-import { housingAtom } from '@/jotai/atom'
+import { housingAtom } from '@/lib/atom'
 
 
 interface Idata {

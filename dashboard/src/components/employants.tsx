@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Alert } from '@mui/material'
 import {v4} from 'uuid'
 import { useAtom, useSetAtom } from 'jotai'
-import { isVisible, updateEmpolyeeAtom } from '@/jotai/atom'
+import { isVisible, updateEmpolyeeAtom } from '@/lib/atom'
 import EmployeeForm from './employeeForm'
 
 

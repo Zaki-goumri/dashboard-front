@@ -2,7 +2,7 @@
 
 import SigninForm from "@/components/signinForm";
     import { useAtomValue } from "jotai";
-    import { isAuthorizedAtom } from "@/jotai/atom";
+    import { isAuthorizedAtom } from "@/lib/atom";
     import { Alert } from "@mui/material";
 
 const Page = () => {

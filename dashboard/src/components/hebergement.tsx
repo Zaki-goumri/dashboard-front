@@ -10,7 +10,7 @@ import { Alert } from '@mui/material'
 import {v4} from 'uuid'
 import  AddHebergementForm  from '@/components/haubergeForm'
 import { useAtom, useSetAtom } from 'jotai'
-import { isVisible, updateHousingAtom } from '@/jotai/atom'
+import { isVisible, updateHousingAtom } from '@/lib/atom'
 
 
 export interface HebergementFormData {

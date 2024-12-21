@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, Form, Input, Button, Select, Switch } from 'antd';
 import { useAtom } from 'jotai';
-import { isVisible, updateHousingAtom } from '@/jotai/atom';
+import { isVisible, updateHousingAtom } from '@/lib/atom';
 import axios from '@/api/auth';
 interface AddHebergementFormProps {
     type: string,

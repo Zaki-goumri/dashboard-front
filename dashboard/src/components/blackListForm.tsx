@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, Form, Input, Button } from 'antd';
 import { useAtom } from 'jotai';
-import { isVisible} from '@/jotai/atom';
+import { isVisible} from '@/lib/atom';
 import axios from '@/api/auth';
 
 

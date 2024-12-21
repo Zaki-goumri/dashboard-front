@@ -1,6 +1,6 @@
 "use client"
 
-import { housingAtom } from '@/jotai/atom'
+import { housingAtom } from '@/lib/atom'
 import { useAtomValue } from 'jotai'
 import { useEffect, useState } from 'react'
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts'
