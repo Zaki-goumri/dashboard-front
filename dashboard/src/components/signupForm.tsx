@@ -2,7 +2,6 @@
 import React from 'react';
 import { useState } from "react"
 import axios from "@/api/auth"
-// import { serialize } from 'cookie';
 import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -28,18 +27,13 @@ import {
 } from "@/components/ui/select"
 
 
+
 const formSchema = z.object({
   Username:z.string().min(1, "First name is required").max(50),
-  // type: z.enum(["maison","camp"], {
-  //   required_error: "Type is required",
-  // }),
   password: z.string()
     .min(1, "Password is required")
     .min(8, "Password must be at least 8 characters long")
     .max(50),
-    // capacity: z.number().min(1, "Capacity is required"),
-    // address: z.string().min(1, "Address is required"),
-    // telephone: z.number().min(1, "Telephone is required"),
     Role: z.enum(["Admin","Super Admin"])
 })
 
@@ -55,11 +49,7 @@ const { push } = useRouter();
     resolver: zodResolver(formSchema),
     defaultValues: {
       Username: "",
-      // type: "maison",
       password: "",
-      // address: "",
-      // capacity: 6,
-      // telephone: 7,
       Role: "Admin"
     },  
   })
@@ -77,21 +67,6 @@ const { push } = useRouter();
   ).then(()=>{
     push(`/dashboard`)
   })
-  // .then(response => {
-  //   const { accessToken, refreshToken } = response.data;
-  //     document.cookie = serialize('accessToken', accessToken, {
-  //       httpOnly:false,
-  //       expires: new Date(Date.now() +  24 * 60 * 60 * 1000) 
-  //     });
-  //     document.cookie = serialize('refreshToken', refreshToken, {
-  //       httpOnly:false,
-  //       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
-  //     });
-  //   push(`/home`)
-  //   })
-  //   .catch(error => {
-  //     setRegisterationHandling(error.response.data.message);
-  //   })
   }
   
   return (
@@ -117,27 +92,7 @@ const { push } = useRouter();
                 </FormItem>
               )}
             />
-
-            {/* <FormField
-              control={form.control}
-              name="address"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Address</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="L'adresse de l'etablissement"
-                      {...field}
-                      className="border border-gray-300 rounded-md p-4 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
-                      />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            /> */}
-          
-         
-
+        
               <FormField
                 control={form.control}
                 name="Role"

@@ -7,7 +7,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recha
 
 
 
-const COLORS = ['#0088FE', '#00C49F']
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28']
 
 export function HousingChart() {
   const data = useAtomValue(housingAtom) 

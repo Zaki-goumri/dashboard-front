@@ -16,14 +16,13 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { useState } from "react"
 import Alert from '@mui/material/Alert';
-import { serialize } from "cookie"
 import { useRouter } from "next/navigation"
 import {Eye,EyeOff} from "lucide-react"
 
 
 
 const formSchema = z.object({
-  Username: z.string().min(1, "Username is required").max(50),
+  userName: z.string().min(1, "Username is required").max(50),
   password: z.string()
     .min(1, "Password is required")
     .min(8, "Password must be at least 8 characters long")
@@ -35,7 +34,7 @@ export default function Page() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      Username: "",
+      userName: "",
       password: "",
     },  
   })
@@ -47,18 +46,10 @@ export default function Page() {
   function onSubmit(values: z.infer<typeof formSchema>) {
   axios.post(`/auth/admin/login`,values)
     .then(response => {
-      const { accessToken, refreshToken } = response.data;
-      document.cookie = serialize('accessToken', accessToken, {
-        httpOnly: false,
-        expires: new Date(Date.now() + 60 * 60 * 1000) 
-      });
-      document.cookie = serialize('refreshToken', refreshToken, {
-        httpOnly: false,
-        expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) 
-
-      });
-        push(`/dashboard`);
-    })
+      if(response.data){
+        push('/dashboard');
+      }
+})
 
     .catch(error => {
     const message = error.response?.data?.message || 'An error occurred';
@@ -74,7 +65,7 @@ export default function Page() {
           <form onSubmit={form.handleSubmit(onSubmit)}  className="space-y-6">
             <FormField
               control={form.control}
-              name="Username"
+              name="userName"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Username</FormLabel>

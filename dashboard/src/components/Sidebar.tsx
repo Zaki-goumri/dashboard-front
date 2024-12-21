@@ -1,4 +1,4 @@
-import { Home, Hotel, Users, AlertTriangle, Calendar } from 'lucide-react'
+import { Home, Hotel, Users, AlertTriangle, Calendar,Contact  } from 'lucide-react'
 import Link from 'next/link'
 
 const sidebarItems = [
@@ -7,6 +7,7 @@ const sidebarItems = [
   { name: 'Résidents', href: '/dashboard/residents', icon: Users },
   { name: 'Réservations', href: '/dashboard/reservations', icon: Calendar },
   { name: 'Liste Noire', href: '/dashboard/blacklist', icon: AlertTriangle },
+  { name: 'Employants', href: '/dashboard/employants', icon:Contact  },
 ]
 
 export function Sidebar() {

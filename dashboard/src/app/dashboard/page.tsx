@@ -16,10 +16,8 @@ interface Idata {
 }
 
 const data: Idata[] = [
-  {name:"maison", value: 0,occupancy:0},{name:"camp",value:0,occupancy:0}
+  {name:"maison", value: 0,occupancy:0},{name:"camp",value:0,occupancy:0},{name:"Hotel",value:0,occupancy:0}
 ]
-
-
 
 
 export default function DashboardPage() {
@@ -73,8 +71,7 @@ export default function DashboardPage() {
 
     useEffect(() => {
       fetchData()
-      
-    })
+    }, [])
 
   return (
     <div className="space-y-6">
