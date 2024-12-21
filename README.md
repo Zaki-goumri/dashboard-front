@@ -7,13 +7,10 @@ Tourism Dashboard is a comprehensive web application designed to manage and visu
 ## Features
 
 - **Dashboard Overview**: Get a quick glance at key metrics and statistics.
-- **Client Management**: Keep track of individual tourists, clubs, and tourism agencies.
-- **Accommodation Tracking**: Manage information about hotels, tourist complexes, and hostels.
-- **Tourist Spots**: Monitor and update information about various tourist attractions.
-- **Transportation Management**: Track and manage different transportation options available for tourists.
+- **Resident Management**: Keep track of individual residents, hauberges.
 - **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices.
 - **Interactive Charts**: Visualize data with interactive charts and graphs.
-- **User Authentication**: Secure login system with role-based access control.
+- **Employee Management**: Manage employee records, track attendance, and handle payroll.
 
 ## Tech Stack
 
@@ -23,41 +20,6 @@ Tourism Dashboard is a comprehensive web application designed to manage and visu
 - **Charts**: Recharts
 - **Form Handling**: React Hook Form with Zod validation
 - **API Routes**: Next.js API routes for backend functionality
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/your-username/tourism-dashboard.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd tourism-dashboard
-   ```
-
-3. Install dependencies:
-   ```
-   npm install
-   # or
-   yarn install
-   ```
-
-4. Run the development server:
-   ```
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Project Structure
 
